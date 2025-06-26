@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Club Olimpo: El mejor billar premium de la ciudad. Torneos, bar, clases y ambiente único. ¡Reserva tu mesa!">
+    <title>Club Olimpo - Billar Premium</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="Imagenes/logo.png" type="image/png">
+</head>
+<body>
+    <!-- Header/Navigation -->
+    <header class="sticky top-0 z-50 bg-white shadow-md">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="brand text-3xl font-bold text-indigo-800">
+                <img src="Imagenes/logo.png" alt="Logo Club Olimpo" class="inline-block h-10 w-10 mr-2 align-middle" style="vertical-align: middle;">
+                <span class="align-middle">Club Olimpo</span>
+            </div>
+            
+            <div class="hidden md:flex space-x-8">
+                <a href="#inicio" class="nav-link text-gray-800 hover:text-indigo-700 font-medium">Inicio</a>
+                <a href="#servicios" class="nav-link text-gray-800 hover:text-indigo-700 font-medium">Servicios</a>
+                <a href="#mesas" class="nav-link text-gray-800 hover:text-indigo-700 font-medium">Nuestras Mesas</a>
+                <a href="#galeria" class="nav-link text-gray-800 hover:text-indigo-700 font-medium">Galería</a>
+                <a href="#contacto" class="nav-link text-gray-800 hover:text-indigo-700 font-medium">Contacto</a>
+            </div>
+            
+            <div class="flex items-center space-x-4">
+                <button  id="reserveBtnHeader" type="button" class="bg-indigo-700 text-white px-4 py-2 rounded-full hover:bg-indigo-800 transition-colors shadow-lg hidden md:block">
+                    <i class="fas fa-phone-alt mr-2"></i> Reservar
+                </button>
+                
+                <button class="md:hidden text-gray-800 focus:outline-none" id="mobileMenuBtn">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </nav>
+        
+        <!-- Mobile Menu -->
+        <div class="md:hidden hidden bg-white w-full pb-4 px-6 shadow-md" id="mobileMenu">
+            <div class="flex flex-col space-y-3">
+                <a href="#inicio" class="text-gray-800 hover:text-indigo-700 font-medium py-2">Inicio</a>
+                <a href="#servicios" class="text-gray-800 hover:text-indigo-700 font-medium py-2">Servicios</a>
+                <a href="#mesas" class="text-gray-800 hover:text-indigo-700 font-medium py-2">Nuestras Mesas</a>
+                <a href="#galeria" class="text-gray-800 hover:text-indigo-700 font-medium py-2">Galería</a>
+                <a href="#contacto" class="text-gray-800 hover:text-indigo-700 font-medium py-2">Contacto</a>
+                <button  id="reservarBtnMobile" type="button" class="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Reservar</button>
+
+                
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero min-h-screen flex items-center justify-center text-white text-center fondo-opaco">
+        <div class="container mx-auto px-6">
+            <h1 class="text-5xl md:text-7xl font-bold mb-6 animate-bounce-custom">Club Olimpo</h1>
+            <h2 class="text-3xl md:text-4xl font-semibold mb-8">El billar premium donde los dioses juegan</h2>
+            
+            <div class="flex flex-col md:flex-row justify-center gap-4 md:gap-6">
+                <button  id="reserveBtnHero" type="button" class="bg-yellow-500 hover:bg-yellow-600 text-indigo-900 font-bold px-8 py-4 rounded-full text-lg md:text-xl transition-all transform hover:scale-105 shadow-lg">
+                    <i class="fas fa-calendar-alt mr-2"></i> Reservar Mesa
+                </button>
+                <button onclick="window.open('https://www.google.com/maps/search/Your+Address+Here', '_blank')" class="bg-transparent border-2 border-white hover:bg-white hover:text-indigo-900 text-white font-bold px-8 py-4 rounded-full text-lg md:text-xl transition-all transform hover:scale-105">
+                    <i class="fas fa-map-marker-alt mr-2"></i> Cómo Llegar
+                </button>
+            </div>
+            
+            <div class="mt-20 animate-pulse">
+                <a href="#servicios" class="text-white text-xl">
+                    <i class="fas fa-chevron-down"></i><br>
+                    Conoce más
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="servicios" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-16 text-indigo-900">Nuestros Servicios</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <!-- Service 1 -->
+                <div class="table-feature p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+                    <div class="text-center mb-6">
+                        <div class="w-20 h-20 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-trophy text-3xl text-yellow-500"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3 text-indigo-800">Torneos Semanales</h3>
+                        <p class="text-gray-600">Participa en nuestros emocionantes torneos con premios en efectivo y membresías premium para los ganadores.</p>
+                    </div>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="table-feature p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+                    <div class="text-center mb-6">
+                        <div class="w-20 h-20 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-beer text-3xl text-yellow-500"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3 text-indigo-800">Bar Premium</h3>
+                        <p class="text-gray-600">Disfruta de nuestra selección de bebidas premium, cervezas artesanales y cócteles exclusivos mientras juegas.</p>
+                    </div>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="table-feature p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+                    <div class="text-center mb-6">
+                        <div class="w-20 h-20 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-user-graduate text-3xl text-yellow-500"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3 text-indigo-800">Clases Profesionales</h3>
+                        <p class="text-gray-600">Aprende de los mejores con nuestras clases personalizadas para todos los niveles, desde principiantes hasta avanzados.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pool Tables Section -->
+    <section id="mesas" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-16 text-indigo-900">Nuestras Mesas de Billar</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Table 1 -->
+                <div class="pool-table-card bg-white rounded-xl overflow-hidden shadow-lg">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="imagenes/mesa1.webp" 
+                             alt="Mesa de billar profesional" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                        <div class="absolute bottom-0 left-0 p-6 text-white">
+                            <h3 class="text-2xl font-bold">Olympic Pro</h3>
+                            <p class="text-yellow-300">★★★★★</p>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <ul class="space-y-2 text-gray-600 mb-4">
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span>Paño de lana 100% profesional</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span>Bolas de fenolico de competición</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span>Marco de roble macizo</span>
+                            </li>
+                        </ul>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-indigo-800">Bs.25/h</span>
+                            <button type="button" class="bg-indigo-700 text-white px-4 py-2 rounded-full hover:bg-indigo-800 transition-colors">
+                                Reservar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Table 2 -->
+                <div class="pool-table-card bg-white rounded-xl overflow-hidden shadow-lg">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="Imagenes/mesa2.jpg" 
+                             alt="Mesa de billar premium" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                        <div class="absolute bottom-0 left-0 p-6 text-white">
+                            <h3 class="text-2xl font-bold">Olympic Elite</h3>
+                            <p class="text-yellow-300">★★★★☆</p>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <ul class="space-y-2 text-gray-600 mb-4">
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span>Paño de lana premium</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span>Bolas de resina de alta calidad</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span>Marco de caoba</span>
+                            </li>
+                        </ul>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-indigo-800">Bs. 20/h</span>
+                            <button class="bg-indigo-700 text-white px-4 py-2 rounded-full hover:bg-indigo-800 transition-colors">
+                                Reservar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Table 3 -->
+                <div class="pool-table-card bg-white rounded-xl overflow-hidden shadow-lg">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="Imagenes/mesa3.jpg" 
+                             alt="Mesa de billar clásica" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                        <div class="absolute bottom-0 left-0 p-6 text-white">
+                            <h3 class="text-2xl font-bold">Olympic Classic</h3>
+                            <p class="text-yellow-300">★★★☆☆</p>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <ul class="space-y-2 text-gray-600 mb-4">
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span>Paño de lana estándar</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span>Bolas de poliéster</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span>Marco de pino tratado</span>
+                            </li>
+                        </ul>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-indigo-800">Bs. 15/h</span>
+                            <button type="button" class="bg-indigo-700 text-white px-4 py-2 rounded-full hover:bg-indigo-800 transition-colors">
+                                Reservar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="galeria" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-16 text-indigo-900">Galería</h2>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="relative group overflow-hidden rounded-xl shadow-lg h-64">
+                    <img src="Imagenes/fondo2.jpg" 
+                         alt="Club Olimpo" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                        <i class="fas fa-search-plus text-white text-3xl"></i>
+                    </div>
+                </div>
+                
+                <div class="relative group overflow-hidden rounded-xl shadow-lg h-64">
+                    <img src="Imagenes/fondologo.jpg" 
+                         alt="Club Olimpo" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                        <i class="fas fa-search-plus text-white text-3xl"></i>
+                    </div>
+                </div>
+                
+                <div class="relative group overflow-hidden rounded-xl shadow-lg h-64">
+                    <img src="Imagenes/fondo3.jpg" 
+                         alt="Club Olimpo" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                        <i class="fas fa-search-plus text-white text-3xl"></i>
+                    </div>
+                </div>
+                
+                <div class="relative group overflow-hidden rounded-xl shadow-lg h-64">
+                    <img src="Imagenes/mesa1.jpg" 
+                         alt="Club Olimpo" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                        <i class="fas fa-search-plus text-white text-3xl"></i>
+                    </div>
+                </div>
+                
+                <div class="relative group overflow-hidden rounded-xl shadow-lg h-64">
+                    <img src="Imagenes/mesa2.jpg" 
+                         alt="Club Olimpo" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                        <i class="fas fa-search-plus text-white text-3xl"></i>
+                    </div>
+                </div>
+                
+                <div class="relative group overflow-hidden rounded-xl shadow-lg h-64">
+                    <img src="Imagenes/mesa3.jpg" 
+                         alt="Club Olimpo" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                        <i class="fas fa-search-plus text-white text-3xl"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <!-- Contact Section -->
+    <section id="contacto" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-16 text-indigo-900">Contáctanos</h2>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="text-2xl font-bold mb-6 text-indigo-800">Información de Contacto</h3>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="bg-indigo-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-map-marker-alt text-indigo-700"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800">Dirección</h4>
+                                <p class="text-gray-600">Doble via la Guardia KM20, bajando 4 cuadra velko, Santa Cruz de la Sierra, Bolivia</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-indigo-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-phone-alt text-indigo-700"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800">Teléfono</h4>
+                                <p class="text-gray-600">+591 69110022</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-indigo-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-envelope text-indigo-700"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800">Email</h4>
+                                <p class="text-gray-600">billiardclubolimpo@gmail.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-indigo-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-clock text-indigo-700"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800">Horario</h4>
+                                <p class="text-gray-600">Lunes a Viernes: 12:00 - 02:00<br>Sábado y Domingo: 10:00 - 03:00</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8">
+                        <h4 class="font-bold text-gray-800 mb-4">Síguenos</h4>
+                        <div class="flex space-x-4">
+                            <a href="https://www.facebook.com/share/1EdNobMXSF/" class="social-icon text-indigo-700 text-2xl">
+                                <i class="fab fa-facebook"></i>
+                            </a>
+                            <a href="#" class="social-icon text-indigo-700 text-2xl">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="social-icon text-indigo-700 text-2xl">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="social-icon text-indigo-700 text-2xl">
+                                <i class="fab fa-tiktok"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-2xl font-bold mb-6 text-indigo-800">Solicitud de Reserva</h3>
+                    
+                    <form id="formReserva" class="space-y-4">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div>
+                                <label for="name" class="block text-gray-700 font-medium mb-2">Nombre</label>
+                                <input type="text" id="name" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                            </div>
+                            <div>
+                                <label for="number" class="block text-gray-700 font-medium mb-2">Cantidad de personas</label>
+                                <input type="number" id="number" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div>
+                                <label for="fecha" class="block text-gray-700 font-medium mb-2">Fecha de Reserva</label>
+                                <input type="date" id="fecha" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                            </div>
+                            <div>
+                                <label for="horario" class="block text-gray-700 font-medium mb-2">Horario de Reserva</label>
+                                <input type="time" id="horario" min="16:00" max="23:59" value="16:00" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500" placeholder="Ej: 19:00">
+                                <span class="text-xs text-gray-500">Horario disponible: 4:00 PM a 12:00 AM</span>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <label for="subject" class="block text-gray-700 font-medium mb-2">Seleccionar Mesa</label>
+                            <select id="subject" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                                <option value="pro">Olympic Pro - Bs. 25/h</option>
+                                <option value="elite">Olympic Elite - Bs. 20/h</option>
+                                <option value="classic">Olympic Classic - Bs. 15/h</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label for="message" class="block text-gray-700 font-medium mb-2">Mensaje</label>
+                            <textarea id="message" rows="5" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="bg-indigo-700 text-white px-6 py-3 rounded-lg hover:bg-indigo-800 transition-colors w-full md:w-auto">
+                            Solicitar Reserva
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div id="reservationModal" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center p-4 z-50 hidden">
+        <div class="bg-white rounded-lg shadow-xl p-8 w-full max-w-md mx-auto relative transform transition-all sm:my-8 sm:w-full">
+            <button id="closeModal" class="absolute top-4 right-4 text-gray-500 hover:text-gray-800 text-2xl font-bold">
+                &times;
+            </button>
+
+            <h3 class="text-3xl font-bold text-indigo-800 mb-6 text-center">¡Reserva tu Mesa en Olimpo!</h3>
+            <p class="text-gray-700 text-lg mb-8 text-center">
+                Para una experiencia premium, todas las reservas se gestionan a través de nuestro equipo. Por favor, contáctanos por WhatsApp o llena el formulario en la sección de contacto.
+            </p>
+
+            <div class="flex flex-col space-y-4">
+                <a href="https://wa.me/59169110022?text=Hola,%20quiero%20hacer%20una%20reserva." target="_blank" class="bg-green-600 text-white px-6 py-3 rounded-full text-lg font-semibold hover:bg-green-700 transition-colors flex items-center justify-center shadow-md">
+                    <i class="fab fa-whatsapp text-xl mr-3"></i> Contactar por WhatsApp
+                </a>
+                <a href="#contacto" id="goToContactBtn" class="bg-indigo-700 text-white px-6 py-3 rounded-full text-lg font-semibold hover:bg-indigo-800 transition-colors flex items-center justify-center shadow-md">
+                    <i class="fas fa-file-alt text-xl mr-3"></i> Ir a Formulario de Reserva
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Map Section -->
+    <div class="h-96 w-full">
+        <iframe src="https://www.google.com/maps?q=-17.8885994,-63.3302016&z=18&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-indigo-900 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Club Olimpo</h3>
+                    <p class="text-indigo-200">El billar premium donde los dioses juegan. Ofrecemos la mejor experiencia de billar con mesas profesionales, clases y un ambiente único.</p>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Enlaces Rápidos</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#inicio" class="text-indigo-200 hover:text-white transition-colors">Inicio</a></li>
+                        <li><a href="#servicios" class="text-indigo-200 hover:text-white transition-colors">Servicios</a></li>
+                        <li><a href="#mesas" class="text-indigo-200 hover:text-white transition-colors">Nuestras Mesas</a></li>
+                        <li><a href="#galeria" class="text-indigo-200 hover:text-white transition-colors">Galería</a></li>
+                        <li><a href="#contacto" class="text-indigo-200 hover:text-white transition-colors">Contacto</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Horario</h3>
+                    <ul class="space-y-2 text-indigo-200">
+                        <li>Lunes a Viernes: 12:00 - 02:00</li>
+                        <li>Sábado y Domingo: 10:00 - 03:00</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Suscríbete</h3>
+                    <p class="text-indigo-200 mb-4">Recibe promociones exclusivas y noticias sobre torneos.</p>
+                    <form class="flex">
+                        <input type="email" placeholder="Tu email" class="px-4 py-2 rounded-l-lg focus:outline-none text-gray-800 w-full">
+                        <button type="submit" class="bg-yellow-500 text-indigo-900 px-4 py-2 rounded-r-lg font-bold hover:bg-yellow-600 transition-colors">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="border-t border-indigo-800 mt-8 pt-8 text-center text-indigo-300">
+                <p>© 2023 Club Olimpo. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const fechaInput = document.getElementById("fecha");
+            const today = new Date();
+            const yyyy = today.getFullYear();
+            const mm = String(today.getMonth() + 1).padStart(2, '0'); // Mes empieza en 0
+            const dd = String(today.getDate()).padStart(2, '0');
+    
+            fechaInput.value = `${yyyy}-${mm}-${dd}`;
+        });
+    </script>
+    
+
+    <script src="main.js"></script>
+</body>
+</html>
+
